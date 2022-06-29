@@ -4,7 +4,7 @@ using Reloaded.ModHelper;
 using NoMansSky.Api;
 using libMBIN.NMS.Globals;
 
-namespace NoMansSky.ModTemplate
+namespace NoMansSky.SecondChance
 {
     /// <summary>
     /// Your mod logic goes here.
