@@ -1,9 +1,9 @@
 {
-  "ModId": "NoMansSky.SecondChance",
-  "ModName": "Second Chance",
+  "ModId": "NoMansSky.FightOrFlight",
+  "ModName": "Fight Or Flight",
   "ModAuthor": "ThatBomberBoi",
   "ModVersion": "1.0.0",
-  "ModDescription": "A Life-Saving 2nd Chance Given To Players Nearing Death",
+  "ModDescription": "A Life-Saving 2nd Chance Given To Players Nearing Death, Allowing Players To Tap Into Their Fight Or Flight Senses.",
   "ModDll": "NoMansSky.FightOrFlight.dll",
   "ModIcon": "Preview.png",
   "ModR2RManagedDll32": "",
