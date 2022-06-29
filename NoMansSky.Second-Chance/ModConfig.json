@@ -4,7 +4,7 @@
   "ModAuthor": "ThatBomberBoi",
   "ModVersion": "1.0.0",
   "ModDescription": "A Life-Saving 2nd Chance Given To Players Nearing Death",
-  "ModDll": "NoMansSky.SecondChance.dll",
+  "ModDll": "NoMansSky.Second-Chance.dll",
   "ModIcon": "Preview.png",
   "ModR2RManagedDll32": "",
   "ModR2RManagedDll64": "",

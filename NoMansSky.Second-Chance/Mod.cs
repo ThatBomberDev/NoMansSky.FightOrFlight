@@ -37,6 +37,9 @@ namespace NoMansSky.SecondChance
             {
                 Logger.WriteLine("The Up Arrow was just pressed!");
             }
+
+            giveSecondChance();
+
         }
 
         private void OnMainMenu()
@@ -44,19 +47,67 @@ namespace NoMansSky.SecondChance
             Logger.WriteLine("Main Menu shown!");
 
 
-            GlobalMbinModding();
+            
         }
 
-        // here is an example of modding globals with the new MemoryManager
-        private void GlobalMbinModding()
+        private void giveSecondChance()
         {
-            var memoryMgr = new MemoryManager(); // create a memory manager.
+            var initialShield = Game.Player.Shield;
+            var memMgr = new MemoryManager();
 
-            // example of getting the run speed from the player globals
-            float currentRunSpeed = memoryMgr.GetValue<float>("GcPlayerGlobals.GroundRunSpeed");
+            if (initialShield < 38)
+            {
 
-            // example of settng the run speed to twice it's original value.
-            memoryMgr.SetValue("GcPlayerGlobals.GroundRunSpeed", currentRunSpeed * 2);
+
+                memMgr.SetValue("GcGameplayGlobals.WaterLandingDamageMultiplier", 0.000f);
+                
+                memMgr.SetValue("GcPlayerGlobals.HealthRechargeMinTimeSinceDamage", 2);
+                memMgr.SetValue("GcPlayerGlobals.ShieldRechargeMinTimeSinceDamage", 2);
+
+                memMgr.SetValue("GcPlayerGlobals.WeaponZoomFOV", 0.5);
+                memMgr.SetValue("GcPlayerGlobals.WeaponChangeModeTime", 0.25);
+
+            }
+
+            else
+            {
+                memMgr.SetValue("GcGameplayGlobals.WaterLandingDamageMultiplier", 0.333f);
+
+                memMgr.SetValue("GcPlayerGlobals.HealthRechargeMinTimeSinceDamage", 10);
+                memMgr.SetValue("GcPlayerGlobals.ShieldRechargeMinTimeSinceDamage", 30);
+
+                memMgr.SetValue("GcPlayerGlobals.WeaponZoomFOV", 0.7);
+                memMgr.SetValue("GcPlayerGlobals.WeaponChangeModeTime", 0.75);
+
+            }
+
+            var shipShield = Game.Player.Ship.Shield;
+            if (shipShield <38)
+            {
+                memMgr.SetValue("GcSpaceshipGlobals.ShieldRechargeMinHitTime", 2);
+                memMgr.SetValue("GcSpaceshipGlobals.ShieldRechargeRate", 10);
+                
+                memMgr.SetValue("GcSpaceshipGlobals.LaserOverheatTime", 25);
+                memMgr.SetValue("GcSpaceshipGlobals.LaserCoolFactor", 5);
+                memMgr.SetValue("GcSpaceshipGlobals.ProjectileOverheatTime", 25);
+                memMgr.SetValue("GcSpaceshipGlobals.ProjectileFireRate", 15);
+                memMgr.SetValue("GcSpaceshipGlobals.ProjectileReloadTime", 0.5);
+                memMgr.SetValue("GcSpaceshipGlobals.ProjectileClipSize", 2000);
+
+            }
+            else
+            {
+                memMgr.SetValue("GcSpaceshipGlobals.ShieldRechargeMinHitTime", 60);
+                memMgr.SetValue("GcSpaceshipGlobals.ShieldRechargeRate", 6);
+                
+                memMgr.SetValue("GcSpaceshipGlobals.LaserOverheatTime", 5);
+                memMgr.SetValue("GcSpaceshipGlobals.LaserCoolFactor", 0.2);
+                memMgr.SetValue("GcSpaceshipGlobals.ProjectileOverheatTime", 5);
+                memMgr.SetValue("GcSpaceshipGlobals.ProjectileFireRate", 0.15);
+                memMgr.SetValue("GcSpaceshipGlobals.ProjectileReloadTime", 4);
+                memMgr.SetValue("GcSpaceshipGlobals.ProjectileClipSize", 500);
+            }
+
         }
 
         private void GameJoined()
