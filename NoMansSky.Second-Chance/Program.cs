@@ -12,7 +12,7 @@ using libMBIN.NMS;
 using System.Diagnostics;
 #endif
 
-namespace NoMansSky.SecondChance
+namespace NoMansSky.FightOrFlight
 {
     public class Program : IMod
     {

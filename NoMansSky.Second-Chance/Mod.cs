@@ -4,7 +4,7 @@ using Reloaded.ModHelper;
 using NoMansSky.Api;
 using libMBIN.NMS.Globals;
 
-namespace NoMansSky.SecondChance
+namespace NoMansSky.FightOrFlight
 {
     /// <summary>
     /// Your mod logic goes here.
@@ -69,6 +69,7 @@ namespace NoMansSky.SecondChance
                 memMgr.SetValue("GcPlayerGlobals.MeleeSpeedBoost", 5);
                 memMgr.SetValue("GcPlayerGlobals.BulletClipMultiplier", 10);
                 memMgr.SetValue("GcPlayerGlobals.UseHazardProtection", false);
+                memMgr.SetValue("GcPlayerGlobals.FullClipReloadSpeedMultiplier", 15);
 
                 memMgr.SetValue("GcPlayerGlobals.WeaponZoomFOV", 0.5);
                 memMgr.SetValue("GcPlayerGlobals.WeaponChangeModeTime", 0.25);
@@ -80,6 +81,7 @@ namespace NoMansSky.SecondChance
                 memMgr.SetValue("GcPlayerGlobals.MeleeSpeedBoost", 1);
                 memMgr.SetValue("GcPlayerGlobals.BulletClipMultiplier", 2);
                 memMgr.SetValue("GcPlayerGlobals.UseHazardProtection", true);
+                memMgr.SetValue("GcPlayerGlobals.FullClipReloadSpeedMultiplier", 2);
 
                 memMgr.SetValue("GcPlayerGlobals.WeaponZoomFOV", 0.7);
                 memMgr.SetValue("GcPlayerGlobals.WeaponChangeModeTime", 0.75);
