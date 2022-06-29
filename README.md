@@ -1,23 +1,26 @@
-# NoMansSky.ModTemplate
-A Mod Template for No Man's Sky mods using [Reloaded 2](https://github.com/Reloaded-Project/Reloaded-II/releases/latest) and the [No Man's Sky API](https://github.com/gurrenm3/NoMansSky.Api)!
+# NoMansSky.FightOrFlight
+A Logic Based Mod for No Man's Sky mods using [Reloaded 2](https://github.com/Reloaded-Project/Reloaded-II/releases/latest) and the [No Man's Sky API](https://github.com/gurrenm3/NoMansSky.Api)!
 
-For more info on modding No Mans Sky, check out the modding wiki here: [https://github.com/gurrenm3/NoMansSky.Api/wiki](https://github.com/gurrenm3/NoMansSky.Api/wiki)
+## Features
+A Life-Saving 2nd Chance Given To Players Nearing Death, Allowing Players To Tap Into Their Fight Or Flight Senses.
+When a Player's shield drops below certain thresholds:
+1) Weapon Reload Speed / Clip Size will Increase
+2) Hazard Protection Will Be Switched Off
+3) Melee and Speed Will Increase
+4) Shield Will Attempt To "soft-lock" to a percentage 
 
-## How to use this:
-Using this mod template is really easy. Follow the steps below and you'll be making your mod in no time!
-
-1. Make sure you followed all of the steps to install Reloaded II and NoMansSky.Api, found [Here](https://github.com/gurrenm3/NoMansSky.Api#how-to-get-started)
-2. Make sure Visual Studio is installed on your computer. This is what we'll be coding our mods in. You can get it [Here](https://visualstudio.microsoft.com/downloads/). Just get the latest version of Visual Studio Community (it's free).
-3. Either create a github account or sign into your existing one.
-4. Clone this template by clicking the green button that says "Use This Template".
-5. You'll be taken to a new page that asks you to put in details like repository name and description. You can put whatever you want but it's usually good practice to put your actual mod's name/description for the repository info. Lastly, set whether or not you want your project to be public or private. I recommend making it public so you can share your mod with others but thats optional. You can always change this stuff later as well.
-6. When you're done click "Create repository from template". You will be taken to a new page. This page is for your mod and has contains all the code for it.
-7. You're now ready to download your mod and start coding it. There are 2 ways to download it:
-   - Using Github Desktop: It's a program made by Github and it makes it very easy to download/manage your code on github. If you don't have it, you can download it [here](https://desktop.github.com/). After it's installed you need to go to the page that was created in step 4 (the one for your mod) and click the green button that says "Code". From there click "Open with Github Desktop". It will open Github Desktop and ask you some questions like where you want to save it. When your done it will be downloaded to your PC. Open up the folder it was downloaded to and you're ready for step 6.
-   - If you're not using Github desktop and want to do it by hand instead, go to the page that was created in step 4 (the one for your mod) and click the green button that says "Code". Next click "Download Zip". Save this zip file to a folder that will not be used for anything but your mod. A good place is a new folder on your desktop. __Do not save it to your Reloaded II mods folder__. Once it's downloaded, extract the zip file and you're ready for step 6.
-8. Now that your mod has been downloaded to your computer, you can start working on your mod. Open up the folder you downloaded the code to, then open the file called "NoMansSky.ModTemplate.sln". This is the project that holds all of your code. At this point you have done everything you need to do to start modding No Mans Sky. Enjoy!
-
-
-
-## Note:
-All of your code will go in the Mod.cs file
+## Installation Instructions
+* A. Install Reloaded2 Mod Manager
+  * Download the latest version of the Reloaded2 Mod Manager. The installer is recommended since it does all the work for you. Link to installer: https://github.com/Reloaded-Project/Reloaded-II/releases/
+  * Open up the Reloaded Mod Manager. On the left side of the screen is a + plus button. Click that to add a game to the manager. Browse for the No Mans Sky exe file, NMS.exe. It is located in the Binaries folder of the No Man's Sky game directory. Ex: Steam\steamapps\common\No Man's Sky\Binaries. Once you select the EXE it is now added to the mod manager.
+* B. Get the NoMansSky.Api
+  * All mods made with Reloaded2 will require the use of NoMansSky.Api. It comes with all the tools that modders need to create their mods. You can get the latest version Here. On this page you will see a section titled "Assets". This is where you'll download the API. You'll see a few different files to choose from. The only one you need is the one named NoMansSky.Api.zip. Click that and download it, you can ignore the rest.
+  * Extract the zip file to your Reloaded2 Mod's folder. It's usually located on your Desktop. Ex: C:\Users\Thomas\Desktop\Reloaded-II\Mods. Make sure it extracts so everything is inside of the NoMansSky.Api folder. Ex: C:\Users\Thomas\Desktop\Reloaded-II\Mods\NoMansSky.Api. NOTE: Make sure you didn't accidentally extract it like this "C:\Users\Thomas\Desktop\Reloaded-II\Mods \NoMansSky.Api\NoMansSky.Api". It can't be inside of 2 "NoMansSky.Api" folders.
+* C. Download the mods that use the Api.
+  * Download the latest version of any mod that uses the NoMansSky.Api. Lets call it "Mod_made_using_the_API"
+  * Extract the zip file to your Reloaded2 Mod's folder, located on your Desktop. Ex: C:\Users\Thomas\Desktop\Reloaded-II\Mods. Make sure it extracts so everything is inside of the "Mod_made_using_the_API" folder ( the folder name should be the name of the mod) Ex: C:\Users\Thomas\Desktop\Reloaded-II\Mods\Mod_made_using_the_API.     
+  * Again, make sure the mod isn't in the "Mod_made_using_the_API" folder twice, like mentioned above with the Api.
+  * Repeat for however many mods you want to use.
+  * Make sure the API and the mods are selected in the Reloaded2 Mod Manager window, else the game wont use the mods nor the API.
+* If your mod isn't loading at all when you run the game, try the following steps: In the Reloaded2 Mod Manager window, click the button with 3 gears on it, select the mod name from the list and make sure it is selected for No Man's Sky. Image for reference: https://imgur.com/a/TuZuPmU
+You're ready to play No Mans Sky with mods!
