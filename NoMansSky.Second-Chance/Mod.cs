@@ -59,14 +59,11 @@ namespace NoMansSky.SecondChance
             var initialShield = Game.Player.Shield;
             var memMgr = new MemoryManager();
 
-            if (initialShield < 38)
+            var criticalAmount = 30;
+            var hazardousAmount = 55;
+
+            if(initialShield < hazardousAmount)
             {
-
-
-                memMgr.SetValue("GcGameplayGlobals.WaterLandingDamageMultiplier", 0.000f);
-                
-                memMgr.SetValue("GcPlayerGlobals.HealthRechargeMinTimeSinceDamage", 2);
-                memMgr.SetValue("GcPlayerGlobals.ShieldRechargeMinTimeSinceDamage", 2);
                 memMgr.SetValue("GcPlayerGlobals.GunBaseClipSize", 5000);
                 memMgr.SetValue("GcPlayerGlobals.MeleeCooldown", 0);
                 memMgr.SetValue("GcPlayerGlobals.MeleeSpeedBoost", 5);
@@ -75,6 +72,28 @@ namespace NoMansSky.SecondChance
 
                 memMgr.SetValue("GcPlayerGlobals.WeaponZoomFOV", 0.5);
                 memMgr.SetValue("GcPlayerGlobals.WeaponChangeModeTime", 0.25);
+            }
+            else
+            {
+                memMgr.SetValue("GcPlayerGlobals.GunBaseClipSize", 0);
+                memMgr.SetValue("GcPlayerGlobals.MeleeCooldown", 0.62);
+                memMgr.SetValue("GcPlayerGlobals.MeleeSpeedBoost", 1);
+                memMgr.SetValue("GcPlayerGlobals.BulletClipMultiplier", 2);
+                memMgr.SetValue("GcPlayerGlobals.UseHazardProtection", true);
+
+                memMgr.SetValue("GcPlayerGlobals.WeaponZoomFOV", 0.7);
+                memMgr.SetValue("GcPlayerGlobals.WeaponChangeModeTime", 0.75);
+            }
+
+            if (initialShield < criticalAmount)
+            {
+
+
+                memMgr.SetValue("GcGameplayGlobals.WaterLandingDamageMultiplier", 0.000f);
+                
+                memMgr.SetValue("GcPlayerGlobals.HealthRechargeMinTimeSinceDamage", 2);
+                memMgr.SetValue("GcPlayerGlobals.ShieldRechargeMinTimeSinceDamage", 2);
+                
 
             }
 
@@ -84,14 +103,7 @@ namespace NoMansSky.SecondChance
 
                 memMgr.SetValue("GcPlayerGlobals.HealthRechargeMinTimeSinceDamage", 10);
                 memMgr.SetValue("GcPlayerGlobals.ShieldRechargeMinTimeSinceDamage", 30);
-                memMgr.SetValue("GcPlayerGlobals.GunBaseClipSize", 0);
-                memMgr.SetValue("GcPlayerGlobals.MeleeCooldown", 0.62);
-                memMgr.SetValue("GcPlayerGlobals.MeleeSpeedBoost", 1);
-                memMgr.SetValue("GcPlayerGlobals.BulletClipMultiplier", 2);
-                memMgr.SetValue("GcPlayerGlobals.UseHazardProtection", true);
-
-                memMgr.SetValue("GcPlayerGlobals.WeaponZoomFOV", 0.7);
-                memMgr.SetValue("GcPlayerGlobals.WeaponChangeModeTime", 0.75);
+               
 
             }
             
